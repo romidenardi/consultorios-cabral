@@ -1,0 +1,165 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Visibilidad */
+
+.invisible {
+    display:none;
+}
+
+.visible {
+    display:block;
+}
+
+/* Grids */
+
+@media (max-width:480px) {
+    .body {
+        display:grid;
+        grid-template-areas:
+        "navbar"
+        "banner"
+        "main"
+        "bajada"
+        "equipo"
+        "turno" 
+        "destacado";
+        grid-template-columns:100%;
+    }
+    
+    .navbar {
+        grid-area:navbar;
+    }
+    
+    .banner {
+        grid-area:banner;
+    }
+    
+    .main {
+        grid-area:main;
+    }
+    
+    .bajada {
+        grid-area:bajada;
+    }
+    
+    .equipo {
+        grid-area:equipo;
+    }
+    
+    .turno {
+        grid-area:turno;
+    }
+    
+    .destacado {
+        grid-area:destacado;
+    }
+    
+    .grilla {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:5px;
+    }
+}
+
+@media (min-width:481px) {
+
+    
+    .body {
+        display:grid;
+        grid-template-areas:
+        "navbar navbar"
+        "banner banner"
+        "main main"
+        "bajada bajada"
+        "equipo equipo"
+        "turno destacado" 
+        ;
+        grid-template-columns:50% 50%;
+    }
+
+    .navbar {
+        grid-area:navbar;
+    }
+
+    .banner {
+        grid-area:banner;
+    }
+
+    .main {
+        grid-area:main;
+    }
+
+    .bajada {
+        grid-area:bajada;
+    }
+
+    .equipo {
+        grid-area:equipo;
+    }
+
+    .turno {
+        grid-area:turno;
+    }
+
+    .destacado {
+        grid-area:destacado;
+    }
+
+    .grilla {
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        gap:5px;
+    } 
+}
+
+/* Márgenes */
+
+.margin-20 {
+    margin:20px;
+}
+
+.margin-0 {
+    margin:0px;
+}
+
+/* Estilos */
+
+h5 {
+    font-size:16px;
+}
+
+
+.ficha {
+    background-color:#f8f9fa;
+    border:1px solid gray;
+    padding:15px;
+    border-radius:5px;
+}
+
+.ficha h3 {
+    color:gray;
+    margin:5px 0px;
+    font-size:18px;
+}
+
+.ficha p {
+    margin:5px 0px;
+    font-size:12px;
+}
+
+.botones {
+    background-color:cornflowerblue;
+    color:black;
+    padding: 5px;
+    margin:5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.destacado {
+    background-color:lightgray;
+}

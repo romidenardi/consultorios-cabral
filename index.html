@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorios Cabral</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilos.css">
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script defer src="./jquery.js"></script>
+    <script defer src="./script.js"></script>
+</head>
+
+<body class="body">
+
+<nav id="inicio" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#inicio">
+        <img src="./imagenes/logo-consultorio.png" class="d-inline-block align-top" alt="Consultorios Cabral">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#irAEquipo">Staff</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#irAFormulario">Solicitá tu turno</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="banner">
+    <img class="img-fluid" src="./imagenes/banner.png" alt="Médico">
+</section>
+
+<main class="margin-20 main">
+    <h1>Un espacio dedicado integralmente a tu salud</h1>
+    <p>Contamos con un equipo de especialistas en diversas áreas, formados en las más prestigiosas casas de estudio del país, y en permanente capacitación. Nos enfocamos en brindarte una atención de calidad, para que que tu bienestar sea integral. Nos pensamos como una familia, y acompañamos a la tuya.</p>
+</main>
+
+<section id="irAEquipo" class="equipo margin-20">
+    <h2>Conocé a nuestro equipo médico</h2>
+    <div id="staff" class="grilla"> </div>
+</section>
+
+<section id="irAFormulario" class="turno margin-20">
+    <h2>Solicitá tu turno online</h2>
+    <form action="" id="formulario" class="margin-20">
+        <fieldset class="margin-20">
+            <legend class="margin-0">Tus datos</legend>
+            <div>
+                <label for="nombre">Nombre y apellido</label>
+                <input id="usuario" type="text" name="nombre" placeholder="Juan Pérez" class="campo" required>
+            </div>
+            <div>
+                <label for="obrasocial">Obra Social</label>
+                <input id="obraSocial" type="text" name="obrasocial" placeholder="OSDE" class="campo" required>
+            </div>
+            <div>
+                <label for="celular">Celular</label>
+                <input id="celular" type="text" name="celular" placeholder="3492123456" class="campo" required> 
+                <p>Ingresá tu número de celular con el código de área, sin el 0 ni el 15.</p>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="ejemplo@tuemail.com" class="campo" required>
+            </div>
+        </fieldset>
+        <fieldset class="margin-20">
+            <legend class="margin-0">Especialidad</legend>
+            <div>
+                <label for="especialidad">Elegí la especialidad para la cual necesitás un profesional.</label>
+                <div>
+                    <span>Clínica</span>
+                    <input id="rbClinica" type="radio" name="especialidad" value="clinica" required>
+                </div>
+                <div>
+                    <span>Otorrinolaringología</span>
+                    <input id="rbOtorrino" type="radio" name="especialidad" value="otorrino">
+                </div>
+                <div>
+                    <span>Traumatología</span>
+                    <input id="rbTraumato" type="radio" name="especialidad" value="traumato">
+                </div>
+                <div>
+                    <span>Neurología</span>
+                    <input id="rbNeuro" type="radio" name="especialidad" value="neuro">
+                </div>
+                <div>
+                    <span>Pediatría</span>
+                    <input id="rbPediatria" type="radio" name="especialidad" value="pediatria">
+                </div>
+            </div>
+        </fieldset>
+        <div id="medicosParaElegir" class="invisible">
+            <fieldset class="margin-20">
+                <legend class="margin-0">Profesionales</legend>
+                <div>
+                    <div>
+                        <p>Elegí al profesional con el que quieras agendar un turno.</p>
+                    </div>
+                    <div id="opcionesMedicos"> </div>
+                </div>
+            </fieldset>
+        </div>
+        <fieldset class="margin-20">
+            <legend class="margin-0">¡Último paso!</legend>
+            <div>
+                <label for="contacto">¿Cómo querés que te contactemos para confirmar tu turno?</label>
+                <div>
+                    <span>Teléfono</span>
+                    <input type="radio" name="contacto" value="telefono" required>
+                </div>
+                <div>
+                    <span>WhatsApp</span>
+                    <input type="radio" name="contacto" value="whatsapp">
+                </div>
+                <div>
+                    <span>Email</span>
+                    <input type="radio" name="contacto" value="email">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="margin-20">
+            <input type="submit" value="Enviar Formulario" class="botones">
+            <input type="reset" value="Limpiar Formulario" class="botones">
+        </fieldset>
+    </form>
+    <div id="mensajeDeExito" class="invisible margin-20">
+        <p>Solicitud enviada existosamente. Nos contactaremos con vos para confirmar tu turno a la mayor brevedad posible.</p> 
+    </div>
+</section>
+
+<section class="destacado margin-20">
+    <div class="margin-20">
+        <h3>Las últimas noticias de Salud</h3>
+        <div id="bloqueNoticias" class="margin-20"></div>
+    </div>
+</section>
+
+</body>
+</html>
